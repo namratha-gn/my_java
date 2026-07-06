@@ -46,6 +46,9 @@
 // byte a=25;
 // byte b=42;
 // int result =a*b; //see here a and b are byte...but after multiplication it is not byte anymore it is going out of range and getting into integer range ...soo jav ais telling no need for explicit casting..i'll promote you...This is called "Type promotion"
+//type promotion usually takes place while doing the operation...
+//java says i'll promote you , you dpo the operation 
+//but you have to take care of the datatype of the third variable used for storing the operation
 
 //=========================================================================================================================
 // ARITHMATIC OPERATORS

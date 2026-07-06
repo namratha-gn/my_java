@@ -4,7 +4,7 @@
         {
             "label": "compile and run",
             "type": "shell",
-            "command": "cmd /c \"javac \\\"${file}\\\" && java \\\"${fileBasenameNoExtension}\\\"\"",
+            "command": "javac \"${file}\" && java \"${fileBasenameNoExtension}\" < input.txt > output.txt",
             "options": {
                 "cwd": "${fileDirname}"
             },

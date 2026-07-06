@@ -32,6 +32,6 @@ class basics
 }
 
 //Steps in programming 
-// 1. take the input (from user/declare or define by yourself) 2 ways
+// 1. take the input (from user/declare or define by yourself/for loop) 3 ways
 // 2. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
 // 3. printing the result or output (use the third varible to store while operation ad print it...avoid doing the operation in the print statement itself)
