@@ -4,12 +4,15 @@
         {
             "label": "compile and run",
             "type": "shell",
-            "command": "javac ${file} && java ${fileBasenameNoExtension} <input.txt> output.txt",
+            "command": "cmd /c \"javac \\\"${file}\\\" && java \\\"${fileBasenameNoExtension}\\\"\"",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         }
     ]
-  }
+}
   
