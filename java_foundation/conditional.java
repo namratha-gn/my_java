@@ -1,3 +1,5 @@
+//THINK WHEN TO USE IF ELSE,TERNARY,SWITCH STATEMENT(They are all same)
+
 // public class conditional {
 //     public static void main(String[] args) {
 
@@ -281,14 +283,29 @@
 //     }
 // }
 
+//using true and false
+
+
+// public class conditional{
+//    public static void main(String args[]){
+
+//     if(true){
+//         System.out.println("it is true, it will execute for sure");
+//     }
+//     else
+//     System.out.println("it is false, it will exceute if false");
+//    }
+// }
+
+
 //TERNARY OPERATOR(?:) [variable= condition:true:false]
 
-public class conditional{
-    public static void main(String args[]){
-        int n=2;
+// public class conditional{
+//     public static void main(String args[]){
+//         int n=2;
 
-        int result = n%2==0?10:20;
+//         int result = n%2==0?10:20;
 
-        System.out.println(result);
-    }
-}
+//         System.out.println(result);
+//     }
+// }
