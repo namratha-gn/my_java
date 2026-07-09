@@ -39,3 +39,12 @@ public class class_object{
     }
 }
 //=================================================================================================================================
+
+class = blueprint of object 
+
+class tells = "Every student should have these variables and these functions."
+
+object = real world entity(Ex.car,pen, student)
+object have 1.properties 
+            2.behavior / actions 
+
