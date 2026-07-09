@@ -86,5 +86,23 @@ s1.age = 20;
 s2.name = "Anjali";
 s2.age = 19;
 
+Methods
+
+Functions inside a class are called methods.
+Example
+class Student{
+
+    void study(){
+        System.out.println("Studying");
+    }
+
+}
+Calling it
+
+Student s1 = new Student();
+
+s1.study();
+Output
+Studying
 
 
