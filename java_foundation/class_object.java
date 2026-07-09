@@ -97,12 +97,14 @@ class Student{
     }
 
 }
-Calling it
+
+Calling it👇👇
 
 Student s1 = new Student();
 
 s1.study();
-Output
+
+Output👇👇
 Studying
 
 
