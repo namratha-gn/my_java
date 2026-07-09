@@ -40,71 +40,70 @@ public class class_object{
 }
 //=================================================================================================================================
 
-class = blueprint of object 
+    
+// class = blueprint of object 
 
-class tells = "Every student should have these variables and these functions."
+// class tells = "Every student should have these variables and these functions."
 
-object = real world entity(Ex.car,pen, student)
-object have 1.properties 
-            2.behavior / actions 
+// object = real world entity(Ex.car,pen, student)
+// object have 1.properties 
+//             2.behavior / actions 
 
-Creation of class 👇👇
+// Creation of class 👇👇
 
-class Student{
+// class Student{
 
-    String name;   
-    int age;
+//     String name;   
+//     int age;
 
-//object properties iswritten in the form of variables /instance variables
+// //object properties is written in the form of variables /instance variables
 
-    void study(){   // methods
-        System.out.println("Studying...");
-    }
+//     void study(){   // methods
+//         System.out.println("Studying...");
+//     }
 
-}
+// }
 
-Creation of object 👇👇
+// Creation of object 👇👇
 
-Student s1 = new Student();
-Student s2 = new Student();
+// Student s1 = new Student();
+// Student s2 = new Student();
 
--Student = datatype of object (class name)=It tells Java what type of object you're going to create.
--s1,s2 = Reference variable (points to or stores the address of object not object itself)
--new=creats the space for objects in memory 
-RAM
-- new Student() = creats the object 
+// -Student = datatype of object (class name)=It tells Java what type of object you're going to create.
+// -s1,s2 = Reference variable (points to or stores the address of object not object itself)
+// -new=creats the space for objects in memory 
+// RAM
+// - new Student() = creats the object 
 
--The object doesn't have a name. It is an anonymous object until a reference variable points to it.
-
-
-
-Assigning values to two diff students 👇👇
-
-s1.name = "Rahul";
-s1.age = 20;
-
-s2.name = "Anjali";
-s2.age = 19;
-
-Methods
-
-Functions inside a class are called methods.
-Example
-class Student{
-
-    void study(){
-        System.out.println("Studying");
-    }
-
-}
-
-Calling it👇👇
-
-Student s1 = new Student();
-
-s1.study();
-
-Output👇👇
-Studying
+// -The object doesn't have a name. It is an anonymous object until a reference variable points to it.
 
 
+
+// Assigning values to two diff students 👇👇
+
+// s1.name = "Rahul";
+// s1.age = 20;
+
+// s2.name = "Anjali";
+// s2.age = 19;
+
+// Methods
+
+// Functions inside a class are called methods.
+// Example
+// class Student{
+
+//     void study(){
+//         System.out.println("Studying");
+//     }
+
+// }
+
+// Calling it👇👇
+
+// Student s1 = new Student();
+
+// s1.study();
+
+// Output👇👇
+// Studying
