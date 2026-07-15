@@ -33,5 +33,13 @@ class basics
 
 //Steps in programming 
 // 1. take the input (from user/declare or define by yourself/for loop) 3 ways
-// 2. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
-// 3. printing the result or output (use the third varible to store while operation ad print it...avoid doing the operation in the print statement itself)
+// 2. Before doing operation THINK THINK THINK!!!! about edge cases and write code for it
+// 3. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
+// 4. printing the result or output (use the third varible to store while operation ad print it...avoid doing the operation in the print statement itself)
+
+//TIME COMPLEXITY 
+
+//TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
+//REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
+//TC for method 3 is O(1)
+//TC for method 2 is (since it involve the loop in it nad doing divisibele by 10 )==O(log10(N))==O(log N)
