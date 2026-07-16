@@ -187,6 +187,55 @@
 //     }
 // }
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//LEETCODE PROBLEM(REVERSING A  NUMBER
+
+
+// Q.Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+// Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+
+ 
+
+// Example 1:
+
+// Input: x = 123
+// Output: 321
+// Example 2:
+
+// Input: x = -123
+// Output: -321
+// Example 3:
+
+// Input: x = 120
+// Output: 21
+ 
+
+// Constraints:
+
+// -231 <= x <= 231 - 1
+
+// class Solution {
+//     public int reverse(int x) {
+
+//        int reversedigit=0;
+//        while(x!=0){              //it is allowing both +ve nad -ve numbers ....soo if it si not 0 then for alll the numbers you run the code
+         
+//         int lastdigit=x%10;      //analys ehwy you are putting overflow edgecase before reversing the digit
+
+//         if((reversedigit>Integer.MAX_VALUE/10) || (reversedigit==Integer.MAX_VALUE/10 && lastdigit>7) || (reversedigit<Integer.MIN_VALUE/10)|| (reversedigit==Integer.MIN_VALUE/10 && lastdigit<-8)){ //overflow edge case
+//             return 0;
+//         }
+//         reversedigit=(reversedigit*10)+lastdigit;
+       
+//         x=x/10;
+//        }
+//        return reversedigit;
+//     }
+// }
+
+
 //===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 //Q4.Wrie a program to determine if a number is  palindrome or not.Print true if it is plaindrome ,false otherwise
@@ -220,6 +269,56 @@
 //         long n=122;
 //         boolean pal=palindromeNum(n);
 //         System.out.println(pal);
+//     }
+// }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//LEETCODE QUESTION ON PALINDEOME
+
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+
+ 
+
+// Example 1:
+
+// Input: x = 121
+// Output: true
+// Explanation: 121 reads as 121 from left to right and from right to left.
+// Example 2:
+
+// Input: x = -121
+// Output: false
+// Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+// Example 3:
+
+// Input: x = 10
+// Output: false
+// Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+ 
+
+// Constraints:
+
+// -231 <= x <= 231 - 1
+
+//SOLUTION
+
+// class Solution {
+//     public boolean isPalindrome(int x) {
+//         int original=x;
+//         int reverse=0;
+//         if(x<0){
+//             return false;
+//         }
+//         while(x>0){
+//             int lastdigit=x%10;
+//             reverse=(reverse*10)+lastdigit;
+//             x=x/10;
+//         }
+//         if(reverse==original){
+//             return true;
+//         }
+//         else return false;
 //     }
 // }
 
@@ -288,8 +387,11 @@
 //     }
 // }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
 // //METHOD 2 (divisors occurs in pairs ..soo check till root n not till n)(OPTIMIZED CODE===USE THIS)
 
+//(Trick to remember= loop till  root n, n%i==0, n/i)
 // if n=36
 // 1 36  
 // 2 18
@@ -297,31 +399,100 @@
 // 4 9
 // 6 6 ----> to avoid this 6 printing 2 times we are using the condition if(1 != n/1) then print n/i
 
-public class maths {
+// public class maths {
 
-    public static void printDivisors(long n) {
+//     public static void printDivisors(long n) {
 
-        for (long i = 1; i * i <= n; i++) {
+//         for (long i = 1; i * i <= n; i++) {
 
-            if (n % i == 0) {
+//             if (n % i == 0) {
 
-                System.out.print(i + " ");
+//                 System.out.print(i + " ");
 
-                if (i != n / i) {
-                    System.out.print((n / i) + " ");
-                }
+//                 if (i != n / i) {
+//                     System.out.print((n / i) + " ");
+//                 }
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+
+//         long n = 36;
+//         printDivisors(n);
+//     }
+// }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+//Getting the devisiors in the sorted manner
+//first store the unorder factors in a list(bec we don't know how amny factors and what is their size..doo for storing the undefined data structure use the list) then sort that list
+
+
+
+// import java.util.*;
+
+// public class Main {
+//     static void printDivisors(int n) {
+//         ArrayList<Integer> ls = new ArrayList<>();
+
+//TC = O(sqrt(n))===>motive is that the no of dividiors can be finde out using O(sqrt(n) time complexity also)
+//         for (int i = 1; i <= Math.sqrt(n); i++) {
+//             if (n % i == 0) {
+//                 ls.add(i);
+//                 if ((n / i) != i) {
+//                     ls.add(n / i);
+//                 }
+//             }
+//         }
+// TC: O(n log n ) n=no of factors
+
+//         Collections.sort(ls);
+
+//TC= O(n) = for printing 
+//         for (int it : ls) {
+//             System.out.print(it + " ");
+//         }
+//     }
+
+//     public static void main(String[] args) {
+//         printDivisors(36);
+//     }
+// }
+
+
+//=======================================================================================================================================================
+//Q.PRIME NUMBER (the number which it divisible by 1 nad itself is wrong bec it is wrong in case of 1 bec 1 has only 1 factor not 2)
+//CORRECT DEFINITION =====>  a number shd have 2 factors 1 and itself 
+
+public class maths{
+
+   public static boolean isprime(int x){
+
+    if(x==0 || x==1) return false;
+    if(x<0) x=-x;
+    int count=0;
+    for(int i=1;i*i<=x;i++){
+
+        if(x%i==0){
+            count++;
+            if(x/i !=i){
+                count++;
             }
         }
     }
+    if(count==2) return true;
+    else return false;
 
-    public static void main(String[] args) {
+   }
 
-        long n = 36;
-        printDivisors(n);
-    }
+   public static void main(String args[]){
+      int x=25;
+      boolean pri=isprime(x);
+      System.out.println(pri);
+   }
 }
 
-//============================================================================================================================
+
 
 
 
