@@ -31,7 +31,7 @@ class basics
     }
 }
 
-//Steps in programming 
+//STEPS IN PROGRAMMING
 // 1. take the input (from user/declare or define by yourself/for loop) 3 ways
 // 2. Before doing operation THINK THINK THINK!!!! about edge cases and write code for it
 // 3. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
@@ -43,3 +43,9 @@ class basics
 //REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
 //TC for method 3 is O(1)
 //TC for method 2 is (since it involve the loop in it nad doing divisibele by 10 )==O(log10(N))==O(log N)
+
+//TRICKS TO REMEMBER
+
+yaarvdo ond number thagothiya ...aa number hange erobeku ninge...but aa number ge yeno operation apply maadi modify maadi...hange etkondiro number ge serusbeku.ade loop thara ond number aadmele ennond hange thagondu maadthaa erbeku..then you use
+sum=sum+10;
+rev=(rev*10)+lastdigit

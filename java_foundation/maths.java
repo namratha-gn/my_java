@@ -51,6 +51,7 @@
 //    }
 // }
 
+//============================================================================================================================================================================================================================================================================================================
 
 //Q2. Given the number 'n'.Find out and return the number of digits present in a given number (num of  digits you find means count variable is definitely going to be there)(Trick to remeber ===>keep doing n/10 and keep counting digits or use formula)
 
@@ -115,7 +116,7 @@
 
 //     }
 
-//     public static void main(String args[]){
+//     public static void main(String args[]){98
 //        long n=5689;
 //        int digits=countdigits(n);
 //        System.out.println(digits); 
@@ -125,6 +126,8 @@
 
 // EXPLAINATION== see log10(4215)=3.89 something,3.89+1=4.89,if you take integer portiuon of it int(4.89)==4
 // soo int(log10(n)+1)=you'll get thw number of digits in the number
+
+//==================================================================================================================================================================================================================================
 
 //TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
 //REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
@@ -141,37 +144,186 @@
 // int(4534.2356)---->removes the decimal part (just gives the integer by removing the decimal part , don't round off to nearest number)
 //floor(3.625)===>Remove the decimal part and go to the nearest integer on the left side of the number line. ...floor(-2.3)--->-3 ...Remove the decimal part and go to the nearest integer on the left side of the number line...because -3 is the greatest integer that is ≤ -2.3.
 
-//Q3. write a program to generate reverse of a given number N.Print the corresponding reverse number NOTE:if a number has trailing zeros,then it's reverse will not include them.for EG.Reverse of 10400 will be 401 instead of 00401
+//==========================================================================================================================================================================================================================================================================================
+
+//Q3. write a program to generate reverse of a given number N.Print the corresponding reverse number NOTE:if a number has trailing zeros,then it's reverse will not include them.for EG.Reverse of 10400 will be 401 instead of 00401(Trick to remember is: jodsu numbers na )
+
+
 //(NOTE:Don't think in the foolish way like...extract the digit in the reverse order than it becomes reverse number..NOOo it is the individial numbers in reverse manner I want the number in reverse order all at once in the form of once , tens , hundreds , thousands manner)
-
-//DRY RUN
+//But keep extraction of digits concept as handy and add some other logic to do athor problems
+//DRY RUN---->soo here we should think that we should start it from 0(think 0 is there in front of 9)
 // 7789 =====> 9877
-// (0*10)+9=9
-// (9*10)+8  =98
-// (98*10)+7 =987
-// (987*10)+7 =9877
 
-public class maths{
+//recognize the pattern here
 
-    public static long reversenumber(long n){
-        if(n/10==0) return 1;
-        if(n<0) n=-n;
+// (0*10)+9= 9
+// (9*10)+8  = 98                 see one thing here...here we are retaining the same value as it is , but at the same time doing some modifications to it=====>then what  you shd think of?? you should think like this n=n/10, n=n+1, rev=(rev*10)+lastdigit
+// (98*10)+7 = 987
+// (987*10)+7 = 9877
 
-        long rev=0;
-        while(n>0){
-            //int rev=0;                      //never ever initialize inside the loop..it will be looping..aggain you end up being 0 after each loop
-            long lastdigit=n%10;
-            rev=(rev*10)+lastdigit;
-            n=n/10;
+
+
+// public class maths{
+
+//     public static long reversenumber(long n){
+//         if(n/10==0) return 1;          //edge case(if the number is just one digit tehn we cannot reverse it just return 1)
+//         if(n<0) n=-n;
+
+//         long rev=0;
+//         while(n>0){
+//             //int rev=0;                      //never ever initialize inside the loop..it will be looping..again you end up being 0 after each loop
+//             long lastdigit=n%10;             
+//             rev=(rev*10)+lastdigit;           //see first first first of all the rev = 0...9 is  lasdtdigit then it is becoming rev ,8 is last digit then it is becomeig rev means means means .....now you should think that, it has stores in one variable then it is getting stored in another variable===>mean second variable should  be 0 at first rev=0; (Example=count=0)  mean at this point you are suppose to think that...rev is reducing itself soo rev=rev  (n=n/)
+//             n=n/10;
+//         }
+//         return rev;
+//     }
+
+
+//     public static void main(String args[]){
+//        long n=21;
+//        long reverse=reversenumber(n);
+//        System.out.println(reverse);
+//     }
+// }
+
+//===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+//Q4.Wrie a program to determine if a number is  palindrome or not.Print true if it is plaindrome ,false otherwise
+//(palindrome are the numbers for which Reverse is Excatly same as the original one)
+//Trick to remember: take a original number ******** not after doing opearation, reverse it ,compare it(NOTE: n shd be stored in any variable and use for comparision)
+
+// public class maths{
+
+//     public static boolean palindromeNum(long n){
+
+//         //if(n/10==0) return "false"; single number is also a palindrome
+//         if(n<0) return false;     //Most interview questions consider -121 not to be a palindrome because reversing it gives 121- which is not the same.
+//         long rev=0;
+//         long original=n;
+//         while(n>0){    //n 0 aadmele loop end aagutte AT last n=0;
+//            long lastdigit=n%10;
+//            rev=(rev*10)+lastdigit;
+//            n=n/10;
+//         }
+
+//         // if(rev==n) return "true";   see the mistake you have done here ...after each loop n is getting reduced and finally it become 0 then loop ends ..now you rae comapting n=0 with rev=121 soo false even though it is palindrome    
+//         // else return "false";
+
+//         if(rev==original) return true;
+//         else return false;
+
+//         //return reverse == original;(OPTIMIZED WAY)no need to write true or false...== returns true or false only
+//     }
+
+//     public static void main(String args[]){
+//         long n=122;
+//         boolean pal=palindromeNum(n);
+//         System.out.println(pal);
+//     }
+// }
+
+//=======================================================================================================================================================================================================================================
+
+//Q5. Check if a number is Amstrong number or not
+//(Amstrong number= take a number , count the number of digits in it, raise teh number to the power of number of digits , sum it comapre with original/an Armstrong number is a number that equals the sum of its digits raised to the power of the number of digits in the number. )
+//TRICK TO REMEMBER ==> take a number , extract total no of digits, ectract each digit, rase each digit to the total no of digits and sum it
+//if you find somewhere ..where you need to sum some numbers one after another then it is nothing but keep adding one after another ..means modifying means sum=sum+
+
+// public class maths{
+
+//     public static boolean isAmstrong(long n){
+        
+//         //EDGE CASES
+//         if(n<0) return false; //bec nagative  numbers are not amstrong numbers
+//         if(n==0) return true; //bec here my code does not allow 0, it allows only numbers after 0...and also log(0)=undefined
+
+//         long sum=0;
+//         long original=n;
+//         long digits=(int)(Math.log10(n) + 1 + 1e-9);
+//         while(n>0){
+
+//             long lastdigit=n%10;
+//             sum = sum + (long)Math.pow(lastdigit,digits); //you cannot use ** java, nor lastdigit**digits
+//             //if you wnat to take power use..Math,power(down number,up number)==>but it returns double ...soo type cast it
+//             n=n/10;
+
+//         }
+//         if(sum==original) return true;
+//         else return false;
+
+//         //return sum==original
+//     }
+
+
+//     public static void main(String args[]){
+//        long n=153;
+//        boolean amstrongnum=isAmstrong(n);
+//        System.out.println(amstrongnum);
+//     }
+// }
+
+//==============================================================================================================================
+
+//Q6.Printing all the DIVISORS of a number
+//(Trick to remember==> the divisors of a number n is going to be inbetween 1 to n, loop from 1 to n , check i%n==0, print )
+//Tc=since the loop is running n time s====>O(N)
+
+
+//METHOD 1
+
+// public class maths{
+
+//     public static void printDivisors(long n){
+//         for(int i=1;i<=n;i++){
+//             if(n%i==0){
+//                 System.out.print(i+" ");
+//             }
+//         }
+//     }
+
+//     public static void main(String args[]){
+//         long n=4;
+//         printDivisors(n);
+//     }
+// }
+
+// //METHOD 2 (divisors occurs in pairs ..soo check till root n not till n)(OPTIMIZED CODE===USE THIS)
+
+// if n=36
+// 1 36  
+// 2 18
+// 3 12
+// 4 9
+// 6 6 ----> to avoid this 6 printing 2 times we are using the condition if(1 != n/1) then print n/i
+
+public class maths {
+
+    public static void printDivisors(long n) {
+
+        for (long i = 1; i * i <= n; i++) {
+
+            if (n % i == 0) {
+
+                System.out.print(i + " ");
+
+                if (i != n / i) {
+                    System.out.print((n / i) + " ");
+                }
+            }
         }
-        return rev;
     }
 
+    public static void main(String[] args) {
 
-    public static void main(String args[]){
-       long n=1144562000;
-       long reverse=reversenumber(n);
-       System.out.println(reverse);
+        long n = 36;
+        printDivisors(n);
     }
 }
+
+//============================================================================================================================
+
+
+
+
 
