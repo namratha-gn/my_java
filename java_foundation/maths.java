@@ -464,33 +464,66 @@
 //Q.PRIME NUMBER (the number which it divisible by 1 nad itself is wrong bec it is wrong in case of 1 bec 1 has only 1 factor not 2)
 //CORRECT DEFINITION =====>  a number shd have 2 factors 1 and itself 
 
-public class maths{
+// public class maths{
 
-   public static boolean isprime(int x){
+//    public static boolean isprime(int x){
 
-    if(x==0 || x==1) return false;
-    if(x<0) x=-x;
-    int count=0;
-    for(int i=1;i*i<=x;i++){
+//     if(x==0 || x==1) return false;
+//     if(x<0) return false;
+//     int count=0;
+//     for(int i=1;i*i<=x;i++){
 
-        if(x%i==0){
-            count++;
-            if(x/i !=i){
-                count++;
-            }
-        }
-    }
-    if(count==2) return true;
-    else return false;
+//         if(x%i==0){
+//             count++;
+//             if(x/i !=i){
+//                 count++;
+//             }
+//         }
+//     }
+//     if(count==2) return true;
+//     else return false;
 
-   }
+//    }
 
-   public static void main(String args[]){
-      int x=25;
-      boolean pri=isprime(x);
-      System.out.println(pri);
-   }
-}
+//    public static void main(String args[]){
+//       int x=25;
+//       boolean pri=isprime(x);
+//       System.out.println(pri);
+//    }
+// }
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//METHOD 2(OPTIMISED CODE having TC as sqrt(n))=====> just loop from 2 and check till sqrt(n)...if any divisoprd false, no divideoors return true(no need to check for1 . 1 is divisible  by all)
+
+
+// public class Maths {
+
+//     public static boolean isPrime(int x) {
+
+//         // Prime numbers are greater than 1
+//         if (x <= 1) {
+//             return false;
+//         }
+
+//         // Check divisibility from 2 to √x
+//         for (int i = 2; i * i <= x; i++) {
+
+//             if (x % i == 0) {
+//                 return false; // Found a divisor
+//             }
+//         }
+
+//         return true; // No divisor found
+//     }
+
+//     public static void main(String[] args) {
+
+//         int x = 29;
+
+//         System.out.println(isPrime(x));
+//     }
+// }
 
 
 
