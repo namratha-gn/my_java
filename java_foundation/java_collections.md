@@ -11,3 +11,7 @@
 # performance effect 
 
 ![alt text](<Screenshot 2026-07-22 153244.png>)
+
+# LinkedList depiction
+
+![alt text](<Screenshot 2026-07-22 154224.png>)
