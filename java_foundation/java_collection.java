@@ -40,6 +40,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Stack;
 
 
 // public class java_collection{
@@ -227,36 +228,165 @@ import java.util.LinkedList;
 //     }
 // }
 
-//==============================================================================================================================
+//======================================================================================================================================================
 
-public class java_collection{
-    public static void main(String args[]){
+// public class java_collection{
+//     public static void main(String args[]){
 
-        //LINKED LIST
+//         //LINKED LIST 
 
-// - Unlike array linkedlist stores the values in the non contigious memory location(at random  places)
-// - the elements in the linkedlist is called Node
-// - each node will be of 3 parts 1. previous value address 2. value 3.next value address
+// // - Unlike array linkedlist stores the values in the non contigious memory location(at random  places)
+// // - the elements in the linkedlist is called Node
+// // - each node will be of 3 parts 1. previous value address 2. value 3.next value address
 
 
-// CREATION OF LINKEDLIST
+// // CREATION OF LINKEDLIST
+
+// // LinkedList<Integer> linkedlist = new LinkedList<>();
+// // LinkedList<String> linkedlist = new LinkedList<>();
+// // List<Integer> linkedlist = new LinkedList<>(); 
+// // Collection<Integer> linkedlist = new Linkedlist<>();
+
+// // - all the methods that  are working for the ArrayList works the sam eway inside the LinkedList as well Except clone()
 
 // LinkedList<Integer> linkedlist = new LinkedList<>();
-// LinkedList<String> linkedlist = new LinkedList<>();
-// List<Integer> linkedlist = new LinkedList<>();
-// Collection<Integer> linkedlist = new Linkedlist<>();
+// linkedlist.add(4);
+// linkedlist.add(8);
+// linkedlist.add(14);
+// linkedlist.add(25);
+// linkedlist.add(4);
+// linkedlist.add(4);
+// System.out.println(linkedlist.lastIndexOf(4));
 
-// - all the methods that  are working for the ArrayList works the sam eway inside the LinkedList as well Except clone()
+//     }
+// }
 
-LinkedList<Integer> linkedlist = new LinkedList<>();
-linkedlist.add(4);
-linkedlist.add(8);
-linkedlist.add(14);
-linkedlist.add(25);
-linkedlist.add(4);
-linkedlist.add(4);
-System.out.println(linkedlist.lastIndexOf(4));
+//==================================================================================================================================================
 
-    }
-}
+// public class java_collection{
+//     public static void main(String args[]){
 
+//         //LINEKD LIST AS QUEUE AND DEQUE
+//         //-->  Since the LinkedList also implements Queue and Deque interface, it can implemnet methods of this interfaces as well.here are some of the commonly used methods
+
+//         LinkedList<Integer> ll= new LinkedList<>();
+
+//         ll.add(25);
+//         ll.add(35);
+//         ll.add(45);
+//         ll.add(55);
+
+//         System.out.println(ll);
+
+//         //addFirst()
+
+//         ll.addFirst(15);
+//         System.out.println(ll);
+
+//         //addLast()
+
+//         ll.addLast(65);
+//         System.out.println(ll);
+
+//         //removeFirst()
+
+//         ll.removeFirst();
+//         System.out.println(ll);
+   
+//         //removeLast()
+
+//         ll.removeLast();
+//         System.out.println(ll);
+
+//         //getFirst()
+
+//         System.out.println(ll.getFirst());
+
+//         //getLast(      )
+
+//         System.out.println(ll.getLast());
+
+//         //peek()
+
+//         System.out.println(ll.peek());
+
+//         //poll() --> Returns and remove sthe first element from the LInkedList
+
+//         System.out.println(ll.poll());
+//         System.out.println(ll);
+
+//         //offer() --> addLast()
+
+//         ll.offer(75);
+//         System.out.println(ll);
+
+
+//     }
+// }
+
+//==================================================================================================================================================================
+
+//KNOW THE DIFFERENCE B/W THE VECTOR AND THE ARRAYLIST (SEE THE PICTURE)
+
+// public class java_collection{
+//     public static void main(String args[]){
+
+//         //VECTOR --> The Vector class is an implementation of the List interface  that allows us to create resizable-arrays similar to the ArrayList class
+
+//         // Vector<Integer> v=new Vector<>();
+//         // List<Integer>   v=new Vector<>();
+//         // Collection<Integer> v=new Vector<>();
+
+//         //Almost all the methods working inside the ArrayList do work here also inside the Vector
+//         //EXCEPT isEmpty(), ensureCapacity(), addFirst(), addLast(), and LinkedList specific method swill not work here
+
+//     }
+// }
+
+//==========================================================================================================================================
+
+// public class java_collection{
+//     public static void main(String args[]){
+
+//         //STACK -->Java collection framework  has a Stack named class that provides the functionality of the stack data structure The Stack class extends the vector class
+//         // - Stack class and the stack datastructure are not sam ethey are different know that
+//         //- Stack works in the LIFO order (Ex.plates)
+//         //- the common methods of the collection framework works in the stack also and there are some of the Stack specific methods such as 
+//         // push(), pop(), peek(), search(), empty()--->This all are stack specific functions (works only when the reference is also Stack only)
+
+//         // Stack<Integer> st=new Stack<>();   //creating  the stack(The refence and implementation both should be stack only )
+//         // Stack<String> st=new Stack<>();
+//         // List<Integer> st= new Stack<>();-->wrong if you are using stack specific functions
+
+//         Stack<Integer> st = new Stack<>();
+//         st.push(10);
+//         System.out.println(st);
+//         st.push(20);
+//         System.out.println(st);
+//         st.push(30);
+//         System.out.println(st);
+//         st.push(40);
+//         System.out.println(st);
+
+//         //pop()
+//         st.pop();
+//         System.out.println(st);
+
+//         //peek() ->returns the top most element
+
+//         System.out.println(st.peek());
+
+//         //search()--> returns -1 if the element is not available , returns 1 if it finds element in first place, returns 2 if the element is there in 2nd place and soo on
+//         System.out.println(st.search(10));
+
+//         //empty()
+//         System.out.println(st.empty());
+
+
+// // see if you use list/ collections as the reference and craete the object using LinkedList, ArrayList, Stcak, Vector--> the all the Clases methods works in all other classes with some exception methods
+
+
+//     }
+// }
+
+//==========================================================================================================================================================================================
