@@ -11,6 +11,8 @@
 // -You can use all the methods under the Collection framework inside the sub interfaces also(Ex:list)
 // -The methods of List interfaces  can be used inside it's classes like ArrayList, LisnkedList, Stack, Vector 
 
+
+
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 //REMEMBER THIS
@@ -33,6 +35,10 @@
 //     - ArrayList<Integer> list = new ArrayList<>(); //created the list data structure using array list
 //     - All the methods of the Collection and the list can be accessible and usabe inside the array list
 //     - The methods of ArrayList -->sort(), clone(), ensureCapacity(), isEmpty(), indexOf()
+
+//very very very important thing in java collections is to first import the required interfaces and classes
+//Don't forget to keep<>
+//REMEMBER, while applying any method on any interface make sure that you use the q.(variable.) then apply teh method ...know that!!
 
 import java.util.ArrayList;
 import java.util.List;
