@@ -23,6 +23,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 //IMPLEMENTING QUEUE USING LINKEDLIST CLASS
 
@@ -119,32 +124,213 @@ import java.util.Deque;
 //after implementing deque using arraydeque and if you use push(),pop(),peek() ==>it it becomes stack
 //while using stack..you think pile of plates( plate1 palte2 plate3) but while implementing the stack in laptop it looks like ( palte3 plate2 plate1)..when you pop()==>plate3 will removes...just a confustion part look at it carefully 
 //TRICK TO VIZUALISSE==>VIZUALISE IT AS YOU ARE PILING UP THE PLATES IN LEFT SIDE NOT FROM RIGHT SIDE
+
+// public class java2_collections{
+//     public static void main(String args[]){
+//         Deque<Integer> stack=new ArrayDeque<>();
+
+//         //push()
+
+//         stack.push(10);
+//         stack.push(20);
+//         stack.push(30);
+//         stack.push(40);
+
+//         System.out.println(stack);
+
+//         //pop();
+//          stack.pop();
+        
+//         System.out.println(stack);
+
+//         //peek()
+
+//         System.out.println(stack.peek());
+//         System.out.println(stack);
+
+        
+//     }
+// }
+
+//====================================================================================================================================================================================================================================
+
+//IMPLEMENTING QUEUE USING PRioRITY QUEUE
+
+//you add the elements into the queue in the order 20,80,90,70..but it prints inn the order [20, 70, 90, 80]...because 
+//The reason is:
+
+// PriorityQueue stores elements internally as a Heap (a binary heap), not as a sorted list.
+
+// A heap only guarantees one thing:
+
+// The smallest element is always at the front (the root).
+
+// It does not guarantee that all the remaining elements are in sorted order.
+
+// So internally it may look like:
+
+//         20
+//        /  \
+//      70    90
+//     /
+//   80
+
+//-----------------------------------------------------------------------------------
+
+//default behaviour in priority queue (if you are dealing with integers)-->less value --> Highest priority {This is nothing but min heap}
+//high value--> Highest priority-->{This is nothing but max heap} --> use this to make it to behave as max heap using this lambda expression--> Queue<Integer> pq=new PriorityQueue<>((a,b)->b-a);
+//pq-->strings-->Comparator(will be taught in next classes)
+
+
+// public class java2_collections{
+//     public static void main(String args[]){
+
+//     Queue<Integer> pq=new PriorityQueue<>();
+
+//     //pq.offer()
+
+//     pq.offer(20);
+//     pq.offer(80);
+//     pq.offer(90);
+//     pq.offer(70);
+
+//     System.out.println(pq);
+
+//     //poll()
+
+//     System.out.println(pq.poll());
+
+//     }
+// }
+
+//===============================================================================================================================================================
+
+//SET
+
+// HashSet --> order is not going to be preserved(random order) --> Tc=O(1){bec all the insertion deletion or accsessiing eveything happens simply& easily no such complexity }
+// LinkedHashSet --> order is going to be preserved (sma eorder given by user) --> TC=O(N){bec the removal or accessing element happens by travelling to one partiicular node (LinkedList concept)}
+// TreeSet --> order is going to be in sorted manner --> TC=O(logN){this is based on binary search tree concept  where the Tc=log(N) soo here also O(logN)}
+
+
+// //IMPLEMENTING SET USING HASHSET
+
+//the order is not preserved while printing the set(bec when you provide the vlaues into it in order wise..it take seach value and stores it in set in one particular place using hascodes ..and that hashcodes are random soo that order is also random )
+//Only unique values are allowed no duplicate values are allowed
+
+
+// public class java2_collections{
+//     public static void main(String args[]){
+     
+//      Set<Integer> set1=new HashSet<>();
+//      Set<Integer> set2=new HashSet<>();
+
+//      //add()
+
+//     //  st.add(10);
+//     //  st.add(20);
+//     //  st.add(10);
+//     //  st.add(10);
+//     //  st.add(10);
+//     //  st.add(20);
+//     //  st.add(10);
+//     //  st.add(10);
+//     //  st.add(30);
+//     //  System.out.println(st);
+
+//     //retainAll() -->Intersection of set(common among the 2 sets gets retained)
+
+//     // set1.add(1);
+//     // set1.add(2);
+//     // set1.add(3);
+//     // set1.add(4);
+
+//     // set2.add(3);
+//     // set2.add(4);
+//     // set2.add(5);
+//     // set2.add(6);
+
+//     // System.out.println(set1);
+//     // System.out.println(set2);
+
+//     // set1.retainAll(set2);
+//     // System.out.println(set1);
+
+//     //containsAll()
+
+//     set1.add(1);
+//     set1.add(2);
+//     set1.add(3);
+//     set1.add(4);
+
+//     set2.add(3);
+//     set2.add(4);
+//     set2.add(5);
+//     set2.add(6);
+
+//     System.out.println(set1);
+//     System.out.println(set2);
+
+//     System.out.println(set2.containsAll(set1));
+
+
+//     }
+// }
+
+//==================================================================================================================================
+
+//IMPLEMNETIING SET USING LINKEDHASHSET
+
+//here the order is going to preserve
+
+// public class java2_collections{
+//     public static void main(String args[]){
+    
+//     Set<Integer> lhs = new LinkedHashSet<>();
+
+//     //add()
+
+//         lhs.add(10);
+//         lhs.add(20);
+//         lhs.add(10);
+//         lhs.add(10);
+//         lhs.add(10);
+//         lhs.add(20);
+//         lhs.add(10);
+//         lhs.add(10);
+//         lhs.add(30);
+//         System.out.println(lhs);
+//     }
+// }
+
+//===================================================================================================================================
+
+//IMPLEMNETIING SET USING TREESEt
+
+//here the order is going to be in sorted manner
+
 public class java2_collections{
     public static void main(String args[]){
-        Deque<Integer> stack=new ArrayDeque<>();
+    
+    Set<Integer> lhs = new TreeSet<>();
 
-        //push()
-
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-
-        System.out.println(stack);
-
-        //pop();
-         stack.pop();
+    //add()
         
-        System.out.println(stack);
-
-        //peek()
-
-        System.out.println(stack.peek());
-        System.out.println(stack);
-
-        
+        lhs.add(40);
+        lhs.add(10);
+        lhs.add(20);
+        lhs.add(10);
+        lhs.add(10);
+        lhs.add(10);
+        lhs.add(20);
+        lhs.add(10);
+        lhs.add(10);
+        lhs.add(30);
+        System.out.println(lhs);
     }
 }
+
+
+
 
 
 
