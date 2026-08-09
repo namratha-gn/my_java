@@ -30,22 +30,46 @@ class basics
         System.out.println(description);
     }
 }
-
+//=========================================================================================================================================================================================================================================
 //STEPS IN PROGRAMMING
 // 1. take the input (from user/declare or define by yourself/for loop) 3 ways
 // 2. Before doing operation THINK THINK THINK!!!! about edge cases and write code for it
 // 3. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
+//    while getting the logic think!! should i use loops???should i use ifelse??
 // 4. printing the result or output (use the third varible to store while operation ad print it...avoid doing the operation in the print statement itself)
 
+//=========================================================================================================================================================================================================================================
 //TIME COMPLEXITY 
 
 //TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
 //REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
 //TC for method 3 is O(1)
 //TC for method 2 is (since it involve the loop in it nad doing divisibele by 10 )==O(log10(N))==O(log N)
+//if loop is running for N iterations (unit operations are taking plaec inside the loop so don't consider them) the TC is O(N)
 
+//=========================================================================================================================================================================================================================================
+//EDGE CASES
+//NO.1 : n=0
+//No.2 : n<0
+//No.3 :edge case if n=00 or n=000.....then
+//case 1= if you are taking the datatype as int or long (oure numbers)..then 00 or 000 is treated as 0 itself..soo it will return 1
+//case 2= if you want to count 00 or 000 as 2 and 3 digits then..take the datatype as string..then find the length of string
+//No.4 : n/10==0(only single digit)
+//No.5 : overflow edge case()
+
+
+
+//=========================================================================================================================================================================================================================================================================================================================================
+
+//remember(IF YOU WANT TO GET THE INTEGER PART THEN FOLLOW THIS)
+//in java division '/10' ==== 7125.9 ---->7125 (just removes decimal part) if both the numbers are integers
+// int(4534.2356)---->removes the decimal part (just gives the integer by removing the decimal part , don't round off to nearest number)
+//floor(3.625)===>Remove the decimal part and go to the nearest integer on the left side of the number line. ...floor(-2.3)--->-3 ...Remove the decimal part and go to the nearest integer on the left side of the number line...because -3 is the greatest integer that is ≤ -2.3.
+
+//========================================================================================================================================================================================================================================================================================================================================================
 //TRICKS TO REMEMBER
 
+// 1. MODIFICATION ITSELF TRICK(jodsbeku)
 // yaarvdo ond number thagothiya ...aa number hange erobeku ninge...but aa number ge yeno operation apply maadi modify maadi...hange etkondiro number ge serusbeku.ade loop thara ond number aadmele ennond hange thagondu maadthaa erbeku..then you use
 // sum=sum+10;
 // rev=(rev*10)+lastdigit
