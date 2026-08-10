@@ -1,3 +1,14 @@
+//QUESTIONS
+
+// 1. Extracting each digit from number
+// 2. Counting no of digits in a number
+// 3. Reversing the Number
+// 4. Palindrome
+// 5. Amstrong Number
+// 6. No of Divisors
+//7. prime
+//8. GCD/HCF
+
 //DIGITS
 
 // '%'==> gives remainder(while doing soo quotient should be integer(integral division))
@@ -11,13 +22,13 @@
 //  '%' works on integral division (always always % works if both the numbers are integer 9/10...7/6.....it will not work for 0.9/10....10/0.2)
 //  '/' works on decimal division
 //means when you are doing modulous % always the result /quotient shd be integer(not decimal)...not suppose to use .0 and all...just integer
-//when you are doing normla division using '/' you can put . tehn 0 nad do dividion the quotient can be decimal or integer
+//when you are doing normal division using '/' you can put . then 0 and do division the quotient can be decimal or integer
 
 //if you are something like 0.7/10.....it is the decimal division the point is allowed in the quotient
 
 //===========================================================================================================================================================================================
 
-//EXTRACTING EACH digit from the number n [n is a number not a single digit think loike that](in reverse fashion)(see picture)
+//EXTRACTING EACH digit from the number n [n is a number not a single digit think like that](in reverse fashion)(see picture)
 
 //To extract the last digit in the number  ======> %10 (just always remember what is the work of %10 and /10 )
 //To create the decimal point at the last of number and to round off the number=====> /10 (here very very very imppp thing to remember is ***** the number is mdifying itself ..itself...n=n/10; like n=n+1,n+=1,n++ by undergoing some arithmatic operation)
@@ -38,11 +49,9 @@
 // public static void extract(long n){
 //   while(n>0){                           //till where the loop should run ..till it becomes 0...here we are talking about the edge case
 //             int lastdigit=n%10;              //gives the lastdigit simple..simple but number remains same ..//1. Extracting the last digit 2. printing it(still the number remains same) 3. making it a decimal number and truncationg it...repeate
-//             System.out.print(lastdigit+" "); //print the last digit(don't forget it)
+//             System.out.println(lastdigit+" "); //print the last digit(don't forget it)
 //             n=n/10;                          //keeps points and removes it and give the integer part...//analyse this line..when a numebr what to undergo any kind of modification..anykind  i mean any kind (whetehr it may be +,-,%,/)and modify itself then this is how you have to write it
-
-
-//         }
+// }                                            //Always remember one thing ..before moving to next iteration/loop after completing first iteration....for sure a number should undergo some change/modificxation  or should cut down itself
 
 // }
 //  public static void main(String args[]){
@@ -53,19 +62,19 @@
 
 //============================================================================================================================================================================================================================================================================================================
 
-//Q2. Given the number 'n'.Find out and return the number of digits present in a given number (num of  digits you find means count variable is definitely going to be there)(Trick to remeber ===>keep doing n/10 and keep counting digits or use formula)
+//Q2. Given the number 'n'.Find out and return the NUMBER( IF 'NUMBER' is present THEN COUNT IS DEFINITLY GOING TO BE THERE) of digits present in a given number (num of  digits you find means count variable is definitely going to be there)(Trick to remeber ===>keep doing n/10 and keep counting digits or use formula)
 
 //METHOD 1(don't use this method)
 
 // public class maths{
     
 //     public static int countdigits(long n){
-//         int count1 = 0; //make sure you always define the variable in java ..not just declaring it .but you shoudl define it
+//         int count1 = 0; //make sure you always define the variable in java ..not just declaring it .but you shoudl define it otherwise it is going to store teh garbage value
 //         while (n > 0) {
 //             count1 = count1 + 1;
 //             n = n / 10;
 //         }
-//         return count1;
+//         return count1;   //remember the return keyword should be used immediately before the close bracket
 //     }
 
 //     public static void main(String args[]){
@@ -109,8 +118,8 @@
 //     public static int countdigits(long n){         //be mindfull about taking datatype
 //         if(n==0) return 1;                         //3 edge cases(n=0, n=-ve,sometimes log10(n) provies floating number likes 2.99999)
 //         if(n<0) n=-n;                              //or abs(n) for positive number
-//         int count = (int)(Math.log10(n) + 1);    //I want the integer part of the result not just the decimal part..so i kept int()
-//         //or int count=(int)(Math.log10(n)+1e-9) //sometimes log10(N) gives 2.999999 for like 1000 (but i expect 3.566 and adding 1 becomes ans 4)..so 1e-9 just pushes 2.999 to 3
+//         int count = (int)(Math.log10(n) + 1);      //I want the integer part of the result not just the decimal part..so i kept int()
+//         //or int count=(int)(Math.log10(n)+1e-9)   //sometimes log10(N) gives 2.999999 for like 1000 (but i expect 3.566 and adding 1 becomes ans 4)..so 1e-9 just pushes 2.999 to 3
 
 //         return count;
 
@@ -125,21 +134,21 @@
 // }
 
 // EXPLAINATION== see log10(4215)=3.89 something,3.89+1=4.89,if you take integer portiuon of it int(4.89)==4
-// soo int(log10(n)+1)=you'll get thw number of digits in the number
+// soo int(log10(n)+1e-9)=you'll get the number of digits in the number
 
 //==================================================================================================================================================================================================================================
 
 //TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
-//REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
+//REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interms of log
 //TC for method 3 is O(1)
-//TC for method 2 is (since it involve the loop in it nad doing divisibele by 10 )==O(log10(N))==O(log N)
+//TC for method 2 is (since it involve the loop in it and doing divisibele by 10 )==O(log10(N))==O(log N)
 
 
 //Another edge case if n=00 or n=000.....then
 //case 1: if you are taking the datatype as int or long (oure numbers)..then 00 or 000 is treated as 0 itself..soo it will return 1
 //case 2: if you want to count 00 or 000 as 2 and 3 digits then..take the datatype as string..then find the length of string
 
-//remember
+//remember(IF YOU WANT TO GET THE INTEGER PART THEN FOLLOW THIS)
 //in java division '/10' ==== 7125.9 ---->7125 (just removes decimal part) if both the numbers are integers
 // int(4534.2356)---->removes the decimal part (just gives the integer by removing the decimal part , don't round off to nearest number)
 //floor(3.625)===>Remove the decimal part and go to the nearest integer on the left side of the number line. ...floor(-2.3)--->-3 ...Remove the decimal part and go to the nearest integer on the left side of the number line...because -3 is the greatest integer that is ≤ -2.3.
@@ -174,14 +183,14 @@
 //             //int rev=0;                      //never ever initialize inside the loop..it will be looping..again you end up being 0 after each loop
 //             long lastdigit=n%10;             
 //             rev=(rev*10)+lastdigit;           //see first first first of all the rev = 0...9 is  lasdtdigit then it is becoming rev ,8 is last digit then it is becomeig rev means means means .....now you should think that, it has stores in one variable then it is getting stored in another variable===>mean second variable should  be 0 at first rev=0; (Example=count=0)  mean at this point you are suppose to think that...rev is reducing itself soo rev=rev  (n=n/)
-//             n=n/10;
+//             n=n/10;                           //see this logic rev=(rev*10)+lastdigit; is very very important just analyse it very carefully... n%10 is going to gte me the last digit 9 ....I wnat to make it first digit ****(bec of reverse order)...soo now 1. I want to keep that 9 exactly as it is ..No change should be there 2.get the second number 5 do some connection bw 9 & 5(i.e., 9*10+8)..you got the logic now but the carefull thing here is you should keep 9 asit is as soon as you get it from %...soo you should think of rev=0
 //         }
 //         return rev;
 //     }
 
 
 //     public static void main(String args[]){
-//        long n=21;
+//        long n=21159;
 //        long reverse=reversenumber(n);
 //        System.out.println(reverse);
 //     }
@@ -189,7 +198,7 @@
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//LEETCODE PROBLEM(REVERSING A  NUMBER
+//LEETCODE PROBLEM(REVERSING A  NUMBER)
 
 
 // Q.Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
@@ -235,6 +244,12 @@
 //     }
 // }
 
+//EXPLAINATION
+ 
+//(reversedigit>Integer.MAX_VALUE/10) WHY I AM USING THIS???? ==> bec precaution is better than cure(think what happens next  earlier only)..if any reversed value comes nad tells I am alraedy graeter than Interger.MAX_VALUE/10...Interger.MAX_VALUE/10 tells you are aleardy graeter than me(further if you go nad do operation rev=rev*10+lastdigit) you'll become *10+lastdigit still greater ..even greater than Integer.MAX_VALUE(analyse with the example)..soo prevention is better than cure soo i ma checking now only soo return 0
+//2. if  you are equal to Interger.MAX_VALUE/10 and lastdigit<7 then there is a posiibility for you to complete this iteration and give final rev value
+//2. if  you are equal to Interger.MAX_VALUE/10 and lastdigit>7 then further you cannot go here only eliminated..bec you are greater than me now only..further you go mean syou'll become still greater
+
 
 //===========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
@@ -262,7 +277,7 @@
 //         if(rev==original) return true;
 //         else return false;
 
-//         //return reverse == original;(OPTIMIZED WAY)no need to write true or false...== returns true or false only
+//         //return reverse == original;(OPTIMIZED WAY)no need to write true or false...== returns true or false only(use this simplese way especially when you wnat to return true or false)
 //     }
 
 //     public static void main(String args[]){
@@ -342,7 +357,7 @@
 //         long digits=(int)(Math.log10(n) + 1 + 1e-9);
 //         while(n>0){
 
-//             long lastdigit=n%10;
+//             long lastdigit=n%10;  //**** if n%10 is there then n/10 is going to be there for sure tehy are like mates
 //             sum = sum + (long)Math.pow(lastdigit,digits); //you cannot use ** java, nor lastdigit**digits
 //             //if you wnat to take power use..Math,power(down number,up number)==>but it returns double ...soo type cast it
 //             n=n/10;
@@ -427,6 +442,7 @@
 //Getting the devisiors in the sorted manner
 //first store the unorder factors in a list(bec we don't know how amny factors and what is their size..doo for storing the undefined data structure use the list) then sort that list
 
+//TC=O(srwt(N))
 
 
 // import java.util.*;
@@ -435,7 +451,7 @@
 //     static void printDivisors(int n) {
 //         ArrayList<Integer> ls = new ArrayList<>();
 
-//TC = O(sqrt(n))===>motive is that the no of dividiors can be finde out using O(sqrt(n) time complexity also)
+// TC = O(sqrt(n))===>motive is that the no of dividiors can be finde out using O(sqrt(n) time complexity also)
 //         for (int i = 1; i <= Math.sqrt(n); i++) {
 //             if (n % i == 0) {
 //                 ls.add(i);
@@ -448,7 +464,7 @@
 
 //         Collections.sort(ls);
 
-//TC= O(n) = for printing 
+// TC= O(n) = for printing 
 //         for (int it : ls) {
 //             System.out.print(it + " ");
 //         }
@@ -496,6 +512,7 @@
 
 //METHOD 2(OPTIMISED CODE having TC as sqrt(n))=====> just loop from 2 and check till sqrt(n)...if any divisoprd false, no divideoors return true(no need to check for1 . 1 is divisible  by all)
 
+//TC=O(sqrt(N))
 
 // public class Maths {
 
@@ -524,6 +541,63 @@
 //         System.out.println(isPrime(x));
 //     }
 // }
+
+//==============================================================================================================================================================================================================
+
+//Q. FINDING THE GCD OR HCF OF TWO NUMBERS GIVEN
+
+//BRUTE FORCE MEETHOD
+//N1, N2
+
+
+// import java.util.*;
+
+// public class maths{
+
+//     public static int gcd(int N1, int N2){
+//              int gcdorhcf=1;
+//         for(int i=1;i<=Math.min(N1,N2);i++){
+
+//             if((N1%i==0)&&(N2%i==0)){
+//                 gcdorhcf=i;
+//             }
+//         }
+//         return gcdorhcf;
+//     }
+
+//     public static void main(String args[]){
+//         int N1=9;
+//         int N2=13;
+//         int hcf=gcd(N1,N2);
+//         System.out.println(hcf);
+//     }
+// }
+
+//OPTIMISED METHOD /WORST CASE METHOD
+
+import java.util.*;
+
+public class maths{
+
+    public static int gcd(int N1, int N2){
+        for(int i=Math.min(N1,N2);i<=1;i--){
+            if(N1%i==0 && N2%i==0){
+                return i;
+                Math.break;
+            }
+
+        }
+    }
+
+    public static void main(String args[]){
+         int N1=9;
+        int N2=13;
+        int hcf=gcd(N1,N2);
+        System.out.println(hcf);
+    }
+}
+
+
 
 
 
