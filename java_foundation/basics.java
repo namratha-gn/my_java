@@ -20,16 +20,37 @@
 // }
 
 
-class basics
-{
-    public static void main(String args[])
-    { 
-        String name="Namratha";
-        String place="Chikkaballapur";
-        String description="Hi"+" "+name+" "+"I assume you are from"+" "+place;
-        System.out.println(description);
-    }
-}
+// class basics
+// {
+//     public static void main(String args[])
+//     { 
+//         String name="Namratha";
+//         String place="Chikkaballapur";
+//         String description="Hi"+" "+name+" "+"I assume you are from"+" "+place;
+//         System.out.println(description);
+//     }
+// }
+
+//HOW TO INPUT FROM THE USER IN JAVA
+
+// import java.util.Scanner;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter your name: ");
+//         String name = sc.nextLine();
+
+//         System.out.print("Enter your age: ");
+//         int age = sc.nextInt();
+
+//         System.out.println("Name: " + name);
+//         System.out.println("Age: " + age);
+//     }
+// }
+
 //=========================================================================================================================================================================================================================================
 //STEPS IN PROGRAMMING
 // 1. take the input (from user/declare or define by yourself/for loop) 3 ways
@@ -42,10 +63,18 @@ class basics
 //TIME COMPLEXITY 
 
 //TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
-//REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interns of log
-//TC for method 3 is O(1)
-//TC for method 2 is (since it involve the loop in it nad doing divisibele by 10 )==O(log10(N))==O(log N)
-//if loop is running for N iterations (unit operations are taking plaec inside the loop so don't consider them) the TC is O(N)
+//REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interms of log
+//TC for method 3 is O(1)====> constant time complexity(bec it is the mathematical function operation)
+// if(n==0)
+// if(n<0)
+// n=-n
+// (int)(...)
+// return count
+//this above operations TC is also O(1)-->soo overall constant or unit tc
+//TC for method 2 is (since it involve the loop in it and doing divisibele by 10 )==O(log10(N))==O(log N)
+
+//Questions
+//when the TC is going to be O(1),O(logn),O(n);
 
 //=========================================================================================================================================================================================================================================
 //EDGE CASES

@@ -1,20 +1,20 @@
 //QUESTIONS
 
-// 1. Extracting each digit from number
-// 2. Counting no of digits in a number
+// 1. Extracting each digit from number in reverse fashion (1 way)
+// 2. Counting no of digits in a number                    (2 ways)
 // 3. Reversing the Number
 // 4. Palindrome
 // 5. Amstrong Number
-// 6. No of Divisors
-//7. prime
-//8. GCD/HCF
+// 6. No of Divisors/factors
+// 7. prime number
+// 8. GCD/HCF of a number
 
 //DIGITS
 
 // '%'==> gives remainder(while doing soo quotient should be integer(integral division))
 // '/'==> gives quotient(while doing so the quotient can  be either decimal or integer (deciaml or integral division))
 
-//very  important...java doesnot works like the general mathematics when it comes to rounding off concept (if  7789/10...it is 778.9==> it doesn't roundoff to 779...it just truncates or remove sthat .9 that's it)
+//very important...java doesnot works like the general mathematics when it comes to rounding off concept (if  7789/10...it is 778.9==> it doesn't roundoff to 779...it just truncates or remove sthat .9 that's it)
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@
 
 //===========================================================================================================================================================================================
 
-//EXTRACTING EACH digit from the number n [n is a number not a single digit think like that](in reverse fashion)(see picture)
+//Q1.EXTRACTING EACH digit from the number n [n is a number not a single digit think like that](in reverse fashion)(see picture)
 
 //To extract the last digit in the number  ======> %10 (just always remember what is the work of %10 and /10 )
 //To create the decimal point at the last of number and to round off the number=====> /10 (here very very very imppp thing to remember is ***** the number is mdifying itself ..itself...n=n/10; like n=n+1,n+=1,n++ by undergoing some arithmatic operation)
@@ -51,7 +51,7 @@
 //             int lastdigit=n%10;              //gives the lastdigit simple..simple but number remains same ..//1. Extracting the last digit 2. printing it(still the number remains same) 3. making it a decimal number and truncationg it...repeate
 //             System.out.println(lastdigit+" "); //print the last digit(don't forget it)
 //             n=n/10;                          //keeps points and removes it and give the integer part...//analyse this line..when a numebr what to undergo any kind of modification..anykind  i mean any kind (whetehr it may be +,-,%,/)and modify itself then this is how you have to write it
-// }                                            //Always remember one thing ..before moving to next iteration/loop after completing first iteration....for sure a number should undergo some change/modificxation  or should cut down itself
+// }                                            //Always remember one thing ..before moving to next iteration/loop after completing first iteration....for sure a number should undergo some change/modificxation  or should cut down itself otherwise infinte loop
 
 // }
 //  public static void main(String args[]){
@@ -125,7 +125,7 @@
 
 //     }
 
-//     public static void main(String args[]){98
+//     public static void main(String args[]){
 //        long n=5689;
 //        int digits=countdigits(n);
 //        System.out.println(digits); 
@@ -134,16 +134,25 @@
 // }
 
 // EXPLAINATION== see log10(4215)=3.89 something,3.89+1=4.89,if you take integer portiuon of it int(4.89)==4
-// soo int(log10(n)+1e-9)=you'll get the number of digits in the number
+// soo int(log10(n)+1e-9)=you'll get the number of digits in the number directly
 
 //==================================================================================================================================================================================================================================
 
-//TC= loop is running the number of times the n is getting divisible by 10 ==if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
+//TC= loop is running the number of times the n is getting divisible by 10 == if number is divisible by 10 then remember always tc=log10(N)..if it is getting dividible by 5 TC=log5(N)..if it is getting divisible by 2 log2(N)
 //REMEMMBER THSI ALWAYS***===if the no. of iteration is based on the division then always always always the TC is going to be interms of log
-//TC for method 3 is O(1)
+//TC for method 3 is O(1)====> constant time complexity(bec it is the mathematical function operation)
+// if(n==0)
+// if(n<0)
+// n=-n
+// (int)(...)
+// return count
+//this above operations TC is also O(1)-->soo overall constant or unit tc
 //TC for method 2 is (since it involve the loop in it and doing divisibele by 10 )==O(log10(N))==O(log N)
 
+//Questions
+//when the TC is going to be O(1),O(logn),O(n)???
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Another edge case if n=00 or n=000.....then
 //case 1: if you are taking the datatype as int or long (oure numbers)..then 00 or 000 is treated as 0 itself..soo it will return 1
 //case 2: if you want to count 00 or 000 as 2 and 3 digits then..take the datatype as string..then find the length of string
@@ -155,12 +164,13 @@
 
 //==========================================================================================================================================================================================================================================================================================
 
-//Q3. write a program to generate reverse of a given number N.Print the corresponding reverse number NOTE:if a number has trailing zeros,then it's reverse will not include them.for EG.Reverse of 10400 will be 401 instead of 00401(Trick to remember is: jodsu numbers na )
+//Q3. write a program to generate reverse of a given number N.Print the corresponding reverse number NOTE:if a number has trailing zeros,then it's reverse will not include them.for EG.Reverse of 10400 will be 401 instead of 00401(Trick to remember is: first number na reverse maadi imagine maado then,ond ondee numbers na thago then jodsu )
 
 
 //(NOTE:Don't think in the foolish way like...extract the digit in the reverse order than it becomes reverse number..NOOo it is the individial numbers in reverse manner I want the number in reverse order all at once in the form of once , tens , hundreds , thousands manner)
 //But keep extraction of digits concept as handy and add some other logic to do athor problems
-//DRY RUN---->soo here we should think that we should start it from 0(think 0 is there in front of 9)
+//DRY RUN---->soo here we should think that we should start it from 0(think 0 is there in front of 9)******important thing is that
+//then again remember on thing ...the variable you are using in modification concept(which is constantly changing)
 // 7789 =====> 9877
 
 //recognize the pattern here
@@ -477,6 +487,7 @@
 
 
 //=======================================================================================================================================================
+
 //Q.PRIME NUMBER (the number which it divisible by 1 nad itself is wrong bec it is wrong in case of 1 bec 1 has only 1 factor not 2)
 //CORRECT DEFINITION =====>  a number shd have 2 factors 1 and itself 
 
@@ -555,7 +566,7 @@
 // public class maths{
 
 //     public static int gcd(int N1, int N2){
-//              int gcdorhcf=1;
+//              int gcdorhcf=1;                       //here you should know why they are teking gcd=1 before only
 //         for(int i=1;i<=Math.min(N1,N2);i++){
 
 //             if((N1%i==0)&&(N2%i==0)){
@@ -573,29 +584,41 @@
 //     }
 // }
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 //OPTIMISED METHOD /WORST CASE METHOD
 
-import java.util.*;
+// import java.util.*;
 
-public class maths{
+// public class maths{
 
-    public static int gcd(int N1, int N2){
-        for(int i=Math.min(N1,N2);i<=1;i--){
-            if(N1%i==0 && N2%i==0){
-                return i;
-                Math.break;
-            }
+//     public static int gcd(int N1, int N2){
+//         for(int i=Math.min(N1,N2);i<=1;i--){
+//             if(N1%i==0 && N2%i==0){
+//                 return i;
+//                 break;
+//             }
 
-        }
-    }
+//         }
+//     }
 
-    public static void main(String args[]){
-         int N1=9;
-        int N2=13;
-        int hcf=gcd(N1,N2);
-        System.out.println(hcf);
-    }
-}
+//     public static void main(String args[]){
+//          int N1=9;
+//         int N2=13;
+//         int hcf=gcd(N1,N2);
+//         System.out.println(hcf);
+//     }
+// }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//EUCLIDIAN ALGORITHM
+
+// gcd(a,b) = gcd(a-b,b)--->you do it tell one of them become 0 then the other one is the gcd of that two numbers -->tedious process
+
+// go with this
+
+// gcd(a,b) = gcd(a%b,b) [where a>b] --> then go till one of them is 0 and the other is your gcd
 
 
 
