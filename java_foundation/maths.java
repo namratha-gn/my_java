@@ -1,13 +1,13 @@
 //QUESTIONS
 
-// 1. Extracting each digit from number in reverse fashion (1 way)
-// 2. Counting no of digits in a number                    (2 ways)
-// 3. Reversing the Number
-// 4. Palindrome
-// 5. Amstrong Number
-// 6. No of Divisors/factors
-// 7. prime number
-// 8. GCD/HCF of a number
+// 1. Extracting each digit from number in reverse fashion (1 way) [=0, =00000, <0, /10==0]
+// 2. Counting no of digits in a number                    (2 ways)[=0, =00000, <0, /10==0]
+// 3. Reversing the Number                                 (2 way)[/10==0, overflow edgecase]
+// 4. Palindrome                                           (1 way)
+// 5. Amstrong Number                                      (1 ways)[<0, ==0]
+// 6. No of Divisors/factors                               (3 ways)
+// 7. prime number                                         (2 ways)
+// 8. GCD/HCF of a number                                  (2 ways)
 
 //DIGITS
 
@@ -206,6 +206,7 @@
 //     }
 // }
 
+//For -123, Java treats the number as an integer, not as the characters '-', '1', '2', '3'.
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //LEETCODE PROBLEM(REVERSING A  NUMBER)
@@ -216,7 +217,6 @@
 // Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
 
  
-
 // Example 1:
 
 // Input: x = 123
@@ -239,14 +239,14 @@
 //     public int reverse(int x) {
 
 //        int reversedigit=0;
-//        while(x!=0){              //it is allowing both +ve nad -ve numbers ....soo if it si not 0 then for alll the numbers you run the code
+//        while(x!=0){              //it is allowing both +ve nad -ve numbers ....soo if it is not 0 then for alll the numbers you run the code
          
 //         int lastdigit=x%10;      //analys ehwy you are putting overflow edgecase before reversing the digit
 
 //         if((reversedigit>Integer.MAX_VALUE/10) || (reversedigit==Integer.MAX_VALUE/10 && lastdigit>7) || (reversedigit<Integer.MIN_VALUE/10)|| (reversedigit==Integer.MIN_VALUE/10 && lastdigit<-8)){ //overflow edge case
 //             return 0;
-//         }
-//         reversedigit=(reversedigit*10)+lastdigit;
+//         }                           //you cannot put this overflow edge case bafore reversedigit=(reversedigit*10)+lastdigit;....bec The overflow can happen while calculating:
+//         reversedigit=(reversedigit*10)+lastdigit; //soo make sure that you put the ovverflow edge cases before doing the operation
        
 //         x=x/10;
 //        }
@@ -256,7 +256,7 @@
 
 //EXPLAINATION
  
-//(reversedigit>Integer.MAX_VALUE/10) WHY I AM USING THIS???? ==> bec precaution is better than cure(think what happens next  earlier only)..if any reversed value comes nad tells I am alraedy graeter than Interger.MAX_VALUE/10...Interger.MAX_VALUE/10 tells you are aleardy graeter than me(further if you go nad do operation rev=rev*10+lastdigit) you'll become *10+lastdigit still greater ..even greater than Integer.MAX_VALUE(analyse with the example)..soo prevention is better than cure soo i ma checking now only soo return 0
+//(reversedigit>Integer.MAX_VALUE/10) WHY I AM USING THIS???? ==> bec precaution is better than cure(think what happens next  earlier only)..if any reversed value comes and tells I am alraedy graeter than Interger.MAX_VALUE/10...Interger.MAX_VALUE/10 tells you are aleardy graeter than me(further if you go nad do operation rev=rev*10+lastdigit) you'll become *10+lastdigit still greater ..even greater than Integer.MAX_VALUE(analyse with the example)..soo prevention is better than cure soo i ma checking now only soo return 0
 //2. if  you are equal to Interger.MAX_VALUE/10 and lastdigit<7 then there is a posiibility for you to complete this iteration and give final rev value
 //2. if  you are equal to Interger.MAX_VALUE/10 and lastdigit>7 then further you cannot go here only eliminated..bec you are greater than me now only..further you go mean syou'll become still greater
 
@@ -266,7 +266,7 @@
 //Q4.Wrie a program to determine if a number is  palindrome or not.Print true if it is plaindrome ,false otherwise
 //(palindrome are the numbers for which Reverse is Excatly same as the original one)
 //Trick to remember: take a original number ******** not after doing opearation, reverse it ,compare it(NOTE: n shd be stored in any variable and use for comparision)
-
+//2. extra thing here in palindrome than reverse number ===1. long original=n; 2.return reverse == original;
 // public class maths{
 
 //     public static boolean palindromeNum(long n){
@@ -368,7 +368,7 @@
 //         while(n>0){
 
 //             long lastdigit=n%10;  //**** if n%10 is there then n/10 is going to be there for sure tehy are like mates
-//             sum = sum + (long)Math.pow(lastdigit,digits); //you cannot use ** java, nor lastdigit**digits
+//             sum = sum + (long)Math.pow(lastdigit,digits); //you cannot use ** java, nor lastdigit**digits make sure that you always use Math.pow(,)
 //             //if you wnat to take power use..Math,power(down number,up number)==>but it returns double ...soo type cast it
 //             n=n/10;
 
@@ -422,13 +422,13 @@
 // 2 18
 // 3 12
 // 4 9
-// 6 6 ----> to avoid this 6 printing 2 times we are using the condition if(1 != n/1) then print n/i
+// 6 6 ----> to avoid this 6 printing 2 times we are using the condition if(i != n/i) then print n/i
 
 // public class maths {
 
 //     public static void printDivisors(long n) {
 
-//         for (long i = 1; i * i <= n; i++) {
+//         for (long i = 1; i <= Math.sqrt(n); i++) {
 
 //             if (n % i == 0) {
 
@@ -498,7 +498,7 @@
 //     if(x==0 || x==1) return false;
 //     if(x<0) return false;
 //     int count=0;
-//     for(int i=1;i*i<=x;i++){
+//     for(int i=1;i<=Math.sqrt(x);i++){
 
 //         if(x%i==0){
 //             count++;
@@ -566,12 +566,12 @@
 // public class maths{
 
 //     public static int gcd(int N1, int N2){
-//              int gcdorhcf=1;                       //here you should know why they are teking gcd=1 before only
-//         for(int i=1;i<=Math.min(N1,N2);i++){
+//              int gcdorhcf=1;                       //here you should know why they are taking gcd=1 before only
+//         for(int i=2;i<=Math.min(N1,N2);i++){       //you should also know why we are looping till Math.min(N1,N2)
 
 //             if((N1%i==0)&&(N2%i==0)){
-//                 gcdorhcf=i;
-//             }
+//                 gcdorhcf=i;                        //see you analyse this very profoundly .......when you have a situation like....one number is coming(after doing some operation)...that is not your answer then another number is coming taht is also not your ans..then another..then another...like that only at last(see I am telling "at last")...my answer is coming means like this you have to create one variable put something in it/initialize it with some numbre then...you in every loop after doing some oeration that variable end up storing last value(you are not printing each and every value since you need last one)....that is your ans..in this kind of situation you do like this
+//             }                                      //see here you are waiting till last..till last..soo you are not printing any value(please do vizualizer it)
 //         }
 //         return gcdorhcf;
 //     }
@@ -614,11 +614,38 @@
 
 //EUCLIDIAN ALGORITHM
 
-// gcd(a,b) = gcd(a-b,b)--->you do it tell one of them become 0 then the other one is the gcd of that two numbers -->tedious process
+// gcd(a,b) = gcd(a-b,b)--->you do it till one of them become 0 then the other one is the gcd of that two numbers -->tedious process
 
 // go with this
 
 // gcd(a,b) = gcd(a%b,b) [where a>b] --> then go till one of them is 0 and the other is your gcd
+
+//CODE
+
+public class maths{
+
+    public static int gcd(int N1, int N2){
+         
+        while(N1>0 && N2>0){
+            if(N1>N2) N1=N1%N2;
+            else      N2=N2%N1;    
+        }
+        // if(N1==0) return N2;    Don't write like this know why??
+        // if(N2==0) return N1;
+
+        if(N1==0){
+            return N2;
+        }
+        return N1;
+    }
+
+    public static void main(String args[]){
+        int N1=25;
+        int N2=5;
+        int pri=gcd(N1,N2);
+        System.out.println(pri);
+    }
+}
 
 
 
