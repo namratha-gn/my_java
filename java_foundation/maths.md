@@ -1,7 +1,4 @@
 # press ctrl+shift+p to see the picture
-# My Java
-
-![Java](images/java.png)
 
 # Extraction of digits from the Number
 
