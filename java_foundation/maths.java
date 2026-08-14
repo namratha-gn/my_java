@@ -7,7 +7,7 @@
 // 5. Amstrong Number                                      (1 ways)[<0, ==0]
 // 6. No of Divisors/factors                               (3 ways)
 // 7. prime number                                         (2 ways)
-// 8. GCD/HCF of a number                                  (2 ways)
+// 8. GCD/HCF of a number                                  (3 ways)
 
 //DIGITS
 
@@ -612,7 +612,7 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//EUCLIDIAN ALGORITHM
+//EUCLIDIAN ALGORITHM-->Easiest way and methods to get the gcd or the hcf very fast
 
 // gcd(a,b) = gcd(a-b,b)--->you do it till one of them become 0 then the other one is the gcd of that two numbers -->tedious process
 
@@ -631,7 +631,7 @@ public class maths{
             else      N2=N2%N1;    
         }
         // if(N1==0) return N2;    Don't write like this know why??
-        // if(N2==0) return N1;
+        // if(N2==0) return N1;    why I am not writing this is bec...if first if exececutes then it returns something to function and the function ends...2nd if statement will not execute...it will not check only ...soo error
 
         if(N1==0){
             return N2;

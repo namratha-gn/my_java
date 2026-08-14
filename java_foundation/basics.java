@@ -1,5 +1,5 @@
 //developed by james gosling in 1995(by sun moicrosystem)
-//for execution you just type 1.javac basics.java(file name)[compilation] 2.java basics(class name)[running]/ctrl+shift+B/run at terminal or java file name (java basics.java)
+//for execution you just type 1.javac basics.java(file name)[compilation] 2.java basics(class name)[running]/ctrl+shift+B/run task at terminal or java file name (java basics.java)
 //you can do one line execution in java like python using jshell in terminal
 
 //Java is called "Platform independent language" (means java application may run on any machine irrespective of oS and hardware)because of present of JVM in all the OS(JVM=java vrtual machine)
@@ -58,7 +58,19 @@
 // 3. Do the operation(important  thing to remember here is ===> before doing what ever the operation and storing the resultant value in the third variable ...think what is the datatype of the variable becomes or shd be ..{Ex.what the operators returns or by size} by analysing the datatypes of the individual variables)
 //    while getting the logic think!! should i use loops???should i use ifelse??
 // 4. printing the result or output (use the third varible to store while operation ad print it...avoid doing the operation in the print statement itself)
-
+//5. think how you are going to return something inside the function....bec the way of writing the return is very very important 
+    // 1.just 1 value ===return a
+    // 2.if(){
+    //     return 
+    // }
+    // else return
+     // if(){
+    //     return 
+    // }
+    // return (both are same)
+    // 3.return if (a==a )   ===>while returning true or false especially go with this kind of returning
+//Don't keep if(N1==0) return N2;
+//           if(N2==0) return N1;
 //=========================================================================================================================================================================================================================================
 //TIME COMPLEXITY 
 
@@ -77,16 +89,15 @@
 //when the TC is going to be O(1),O(logn),O(n);
 
 //=========================================================================================================================================================================================================================================
-//EDGE CASES
+//EDGE CASES(not only writing edge case is  important .....but the order or cronology of write it is also important)
+
 //NO.1 : n=0
 //No.2 : n<0
 //No.3 :edge case if n=00 or n=000.....then
 //case 1= if you are taking the datatype as int or long (oure numbers)..then 00 or 000 is treated as 0 itself..soo it will return 1
 //case 2= if you want to count 00 or 000 as 2 and 3 digits then..take the datatype as string..then find the length of string
 //No.4 : n/10==0(only single digit)
-//No.5 : overflow edge case()
-
-
+//No.5 : overflow edge case()---->while dealing with overflow edge case...first thing that you have to think  is....boundary (left and write side boundary) and the just inside the boundary(inner boundary) by seeing the kind of operation that you are doing
 
 //=========================================================================================================================================================================================================================================================================================================================================
 
@@ -102,6 +113,24 @@
 // yaarvdo ond number thagothiya ...aa number hange erobeku ninge...but aa number ge yeno operation apply maadi modify maadi...hange etkondiro number ge serusbeku.ade loop thara ond number aadmele ennond hange thagondu maadthaa erbeku..then you use
 // sum=sum+10;
 // rev=(rev*10)+lastdigit
+
+//===================================================================================================================================================================================================================================================================================================================
+//Many ways of returning a value to the function
+
+// 1.return a
+
+// 2.if(N1==0) return N2
+
+// return N1 (same is if else)
+
+// You are not suppose to use..
+// if(N1==0) return N2
+// if(N2==0)return N1 ..Know the reason
+
+// 3.return N1==N2 
+
+//=========================================================================================================================================================================================================================================================
+
 
 Step 2: What should you actually memorize?
 
