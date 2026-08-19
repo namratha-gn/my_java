@@ -1,32 +1,40 @@
-//PRIMITIVE DATATYPES
+//DATATYPES(see the flowchart)
 
-// 1.integer
-    //   int =4 bytes
+// 1.Numerical datatype ( 0 as default value)
+    //   int =4 bytes 
     //   long = 8 bytes
     //   long l=125l; (keep l at the end)
     //   short = 2 bytes
     //   byte = -2**7 to +2**7-1 i.e.,-128 to +127  (1 byte=8bits) {Total range is 256}
     //   means byte b=127(correct way)
-    //         byte b=129(gives error)
+    //         byte b=129(gives error) no no it doesn't give error or exception ...compiler just secretly runs thta..you gat a wrong value
   
-// 2.float (4 bytes)and double 
+// 2.float (4 bytes 0.0f as default value)and double 
 
     //    //double is bydefault value in java not the float
 
     // double num=5.6;
     // float num=5.6f;
 
-// 3.Character(2 bytes not 1 byte) ..java is acc to UNICODE not ASCII
+// 3.Character(2 bytes not 1 byte / /u0000 as default value) ..java is acc to UNICODE not ASCII
 
     // char c='K';
 
-    // c=c+1; doesnot  work in java
-    // c++ ..correct
+    // c=c+1; doesnot  work in java...bec while doing arithmatic operation java sees it as integer soo c+1 is integer....and you are trying to put integer into character ...soo error...that's why type caste it
+    // c++ ..this works and output as L...this is post increment operator
     // c=(char)(c+1); correct
 
-// 4.Boolean(0 or 1 doesn't work in java only true or false)
+// 4.Boolean(0 or 1 doesn't work in java only true or false/ false as default value)(1 byte)
+    //syntax==boolean flag;  
 
     // boolean b=true/false
+
+// *******************************************************************************************************************
+// there is nothing called garbage value in java
+// if you leave the static or instance varible declaring an not defining ...java stores the default value in them
+// if you leave the local variable declaring and not defining nad later try to use them ....java gives compiler error
+// ********************************************************************************************************************
+
 //=======================================================================================================================
 
 // //TYPE CONVERSION AND TYPE CASTING AND TYPE PROMOTIONS
@@ -41,7 +49,6 @@
 // float f=5.6f;
 // int x=(int)f; //it is going to store 5
 
-// int a=258 //we cannot assign 258 to int bec the range is -127 to +128 which is of the range 256 then it will implicitely do a%256=1;
 
 // byte a=25;
 // byte b=42;
@@ -54,8 +61,8 @@
 // ARITHMATIC OPERATORS
 
 // +,-,*,**,/,%
-// num++,num+=1;num=num+2;
-// num--,num-=1;num=num-3;
+// num++,num+=1;num=num+2;   (Modifying itself concepts)
+// num--,num-=1;num=num-3;   (3 ways writing it)
 // num*=3
 
 // post increment and pre increment
