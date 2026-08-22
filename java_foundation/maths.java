@@ -8,6 +8,7 @@
 // 6. No of Divisors/factors                               (3 ways)
 // 7. prime number                                         (2 ways)
 // 8. GCD/HCF of a number                                  (3 ways)
+// 9. Euclidian algorithm
 
 //DIGITS
 
