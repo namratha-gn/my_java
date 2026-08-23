@@ -353,7 +353,7 @@
 //=======================================================================================================================================================================================================================================
 
 //Q5. Check if a number is Amstrong number or not
-//(Amstrong number= take a number , count the number of digits in it, raise teh number to the power of number of digits , sum it comapre with original/an Armstrong number is a number that equals the sum of its digits raised to the power of the number of digits in the number. )
+//(Amstrong number= take a number , count the number of digits in it, raise the number to the power of number of digits , sum it comapre with original/an Armstrong number is a number that equals the sum of its digits raised to the power of the number of digits in the number. )
 //TRICK TO REMEMBER ==> take a number , extract total no of digits, ectract each digit, rase each digit to the total no of digits and sum it
 //if you find somewhere ..where you need to sum some numbers one after another then it is nothing but keep adding one after another ..means modifying means sum=sum+
 
@@ -390,7 +390,7 @@
 //     }
 // }
 
-//==============================================================================================================================
+//==================================================================================================================================================================
 
 //Q6.Printing all the DIVISORS of a number
 //(Trick to remember==> the divisors of a number n is going to be inbetween 1 to n, loop from 1 to n , check i%n==0, print )

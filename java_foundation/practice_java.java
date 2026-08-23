@@ -27,26 +27,23 @@
 
 // gcd(a,b) =gcd(a%b,b)
 
-public class practice_java{
+// public class practice_java{
 
-    public static int gcd(int N1,int N2){
+//     public static int gcd(int N1,int N2){
 
-        while(N1>0 && N2>0){
-        if(N1>N2) N1=N1%N2;
-        else      N2=N2%N1;
-        }
+//         while(N1>0 && N2>0){
+//         if(N1>N2) N1=N1%N2;
+//         else      N2=N2%N1;
+//         }
 
-        if(N1==0) return N2;
-        else return N1;
-        
-       
+//         if(N1==0) return N2;
+//         else return N1;
+//     }
 
-    }
-
-    public static void main(String args[]){
-        int N1=25;
-        int N2=50;
-        int hcf=gcd(N1,N2);
-        System.out.println(hcf);
-    }
-}
+//     public static void main(String args[]){
+//         int N1=25;
+//         int N2=50;
+//         int hcf=gcd(N1,N2);
+//         System.out.println(hcf);
+//     }
+// }

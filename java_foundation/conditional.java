@@ -40,7 +40,7 @@
 
 // /*Using multiple if statements is not good because compiler is going to check all if condition even though previous conditions is true and executed
 // so go with if ,else condition for simple questions and
-// go with else if condition while solving the problems having multiple conditions....multiple co   ndition ...multiple condiyion
+// go with else if condition while solving the problems having multiple conditions....multiple condition ...multiple condiyion
 // Be very careful while taking the condition inside the if , else if and Think the logic to  use there
 // you can use if , else if and else statements together (can use else for writing the last invalid statements)*/
 
