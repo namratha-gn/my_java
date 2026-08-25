@@ -11,6 +11,14 @@
 //This portability makes Java ideal for cross-platform applications, allowing developers to write code once and run it anywhere with a compatible JVM. 
 
 //================================================================================================================================================================================================================
+
+//Leetcode learnings
+
+//never right function another function in java
+//you can write like this also int n =callfun(n);
+
+//==========================================================================================================================================================================================================================
+
 // IMPORTANR POINTS TO REMEMBER
 
 // Java is platform agnostic; this implies that programs authored on any system can be executed on any other system that has a JVM.
