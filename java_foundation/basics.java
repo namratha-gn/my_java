@@ -15,7 +15,9 @@
 //Leetcode learnings
 
 //never right function another function in java
-//you can write like this also int n =callfun(n);
+//you can write like this also int n =callfun(n);   //while sending  n to the function it is of some value and after the function returns something ...the n is getting changes to itself
+
+
 
 //==========================================================================================================================================================================================================================
 
