@@ -17,6 +17,7 @@
 //never right function another function in java
 //you can write like this also int n =callfun(n);   //while sending  n to the function it is of some value and after the function returns something ...the n is getting changes to itself
 //don't ever define any veriable as 0 (ex:count=0) inside the loop define it or initialize it outside the loop bec after each loop it again becomes 0 if you do soo.no updation will be there..it comes back to starting point
+//check condition inside while loop...loop ....check condition...loop...check condition ...loop
 
 
 
