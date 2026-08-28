@@ -22,6 +22,7 @@
 //check condition inside while loop...loop ....check condition...loop...check condition ...loop
 //edge cases means some input that breaks your code...
 //read question ...then see constraints..===> constraints means the posiible input they give to test your code
+//Dry running your code very very very precisely is most important ....just dry run everything that is hapening in each line of your code
 
 
 
