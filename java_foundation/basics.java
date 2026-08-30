@@ -15,16 +15,17 @@
 //Leetcode learnings
 
 //first read the question correctly until until until you undertood it perfectly ...very perfectly ..then only you'll get the correct logic
-//then see the constrains ==>the inputs they provide for your code
+//then see the constrains ==>the inputs they provide for your code...clearly see the inputs that tehy are giving...think whether they are giving large inpputs like 2**31 then it is very large soo you have ro write code to manage that large input...keep it in  mind nad write your code..depending on that input largness or smallest..your question become seasy or medium tagged
 //never right function another function in java
 //you can write like this also int n =callfun(n);   //while sending  n to the function it is of some value and after the function returns something ...the n is getting changes to itself
 //don't ever define any veriable as 0 (ex:count=0) inside the loop define it or initialize it outside the loop bec after each loop it again becomes 0 if you do soo.no updation will be there..it comes back to starting point
 //check condition inside while loop...loop ....check condition...loop...check condition ...loop
 //edge cases means some input that breaks your code...
 //read question ...then see constraints..===> constraints means the posiible input they give to test your code
-one work is happening(Ex.reversing a  num) then put it separately inside the function
+//one work is happening(Ex.reversing a  num) then put it separately inside the function
 //Dry running your code very very very precisely is most important ....just dry run everything that is hapening in each line of your code
-
+//you are using a variable called i or j inside the for loop right....i=1;i<=10;i++....this i numbers can be using inside the loop by using i or you can skip(you are skipping means just you are concentratiing no of times the loop should run not having the intention to use i inside the loop)...soo there are 2 options think!!! this 2 points before using them
+//Math.pow always return double in java
 
 
 //==========================================================================================================================================================================================================================
