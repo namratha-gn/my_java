@@ -26,6 +26,8 @@
 //Dry running your code very very very precisely is most important ....just dry run everything that is hapening in each line of your code
 //you are using a variable called i or j inside the for loop right....i=1;i<=10;i++....this i numbers can be using inside the loop by using i or you can skip(you are skipping means just you are concentratiing no of times the loop should run not having the intention to use i inside the loop)...soo there are 2 options think!!! this 2 points before using them
 //Math.pow always return double in java
+//continue means “stop the current iteration of the loop and immediately go to the next iteration.”
+// break means get out from the loop
 
 
 //==========================================================================================================================================================================================================================
