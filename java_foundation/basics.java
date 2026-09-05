@@ -31,6 +31,10 @@
 // break means get out from the loop
 //something is repeating means====> think!! put it in a function...calll it call it multiple times acc to condition
 //convert  number from base 10 to base k means ===>divide number repeatedly by k...and get remainders one by one and sum it up...
+//if you do from front or back also...sum means sum(eg. 1+5+6 ==6+5+1)
+//very very very important thing here is ...
+//int remainder=n%k or int lastdigit=n%10;........here n will not change n will stay same...to modify/change/reduce n we do n=n/10...we reduce because at soem time it becomes <0...sooo our loop ends while(n>0) why we write this condition means?? at some time n becomes 0 
+
 
 
 // number=count
