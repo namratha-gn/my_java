@@ -30,6 +30,7 @@
 //continue means “stop the current iteration of the loop and immediately go to the next iteration.”
 // break means get out from the loop
 //something is repeating means====> think!! put it in a function...calll it call it multiple times acc to condition
+//convert  number from base 10 to base k means ===>divide number repeatedly by k...and get remainders one by one and sum it up...
 
 
 // number=count
