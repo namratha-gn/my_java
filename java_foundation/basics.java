@@ -36,6 +36,10 @@
 //int remainder=n%k or int lastdigit=n%10;........here n will not change n will stay same...to modify/change/reduce n we do n=n/10...we reduce because at soem time it becomes <0...sooo our loop ends while(n>0) why we write this condition means?? at some time n becomes 0 
 
 
+// In java how to access the characters of a string ??
+// not just index method str[0]==> wrong(this is in js)
+// str.charAt(0)===> correct
+
 
 // number=count
 
