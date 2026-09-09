@@ -40,6 +40,24 @@
 // not just index method str[0]==> wrong(this is in js)
 // str.charAt(0)===> correct
 
+// A prime factor is a prime number that divides another number.
+// Prime factorization is defined for positive integers greater than 1.
+// For example:
+// 12 → 2 × 2 × 3
+// 18 → 2 × 3 × 3
+// 1 → no prime factors
+// 0 → no prime factorization
+
+
+
+// one very very vital thing that one can know is......
+// The input num you are sending 
+// =>Is getting reduced in each step(changing)
+// =>At last it is becoming 0
+
+// Soo to check whether each digit of num is dividing num...FIRST your num should be stable and it should not change then only we can check....soo soo soo to keep num static or constant  without making it change 
+// first only we are storing it in another variable to keep it static...bec we know that it will change afterwards ...soo first only we are making it safe ...prevention is better than cure
+
 
 // number=count
 
@@ -62,6 +80,18 @@
 // To check a string contains odd no. of digits==>
 // string.length()/2!=0
 
+//%2==0 means it is dividing by 2 completely
+//%10==0 means it is  dividing by 10 completely (there is another imp meaning also)
+//%25==0 means it is diving by 25 completely...whne you see this sytax ....just remember this
+
+// whenever you use for loop or while loop ...you use i or j right
+// DON'T MODIFY OR CHANGE THAT i OR j VARIABLE INSIDE THE LOOP 
+// IF YOU ARE USING THAT i OR j ....just use it don't ever modify it 
+// Bec if you do so....if you do i++ or j++ you get different value not the  consecutive value
+
+//when leetcode says you Time limit exceed ...when you do some logic error and there exist a infinite loop ...at that time ...it shows TLE...mind it ...soo correct the logic mistake
+// Also can be written like this...we are using using valid to just say audience or reader that we found 0. and we are writing break
+// and using that valid variable forward in code and writing condition in such a way the condition should be 0 entire code doesn't work and go for next iteration
 
 //==========================================================================================================================================================================================================================
 
