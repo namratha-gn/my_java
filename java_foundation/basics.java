@@ -48,6 +48,18 @@
 // 1 → no prime factors
 // 0 → no prime factorization
 
+// nums is an array, and in Java an array's size is a property, not a method.
+// So:
+// nums.length
+// ✅ Correct
+// nums.length()
+// ❌ Wrong
+
+// alwaya a function should be returned something 
+// that return should be  written  before the close bracket of function
+// you can write return inside any operation , loop , or if statetemt 
+// but you should ask yourself the question ...whta if thta condition doesn't execute????.....soo always return something to the function (if nothing return -1)
+
 
 
 // one very very vital thing that one can know is......
