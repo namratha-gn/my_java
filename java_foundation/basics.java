@@ -207,6 +207,8 @@
 // Examples:
 // int
 // class
+
+“How big can the input become, and therefore how much time can my algorithm take?”
 // public
 // static
 // if
