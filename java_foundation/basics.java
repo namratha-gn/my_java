@@ -34,7 +34,7 @@
 //if you do from front or back also...sum means sum(eg. 1+5+6 ==6+5+1)
 //very very very important thing here is ...
 //int remainder=n%k or int lastdigit=n%10;........here n will not change n will stay same...to modify/change/reduce n we do n=n/10...we reduce because at soem time it becomes <0...sooo our loop ends while(n>0) why we write this condition means?? at some time n becomes 0 
-
+//Don't ever use inbuilt mathods inside the leetcode problem..try to do it in manual method ..
 
 // In java how to access the characters of a string ??
 // not just index method str[0]==> wrong(this is in js)
@@ -116,6 +116,9 @@
 // Portability and architectural neutrality are supported, whereby Java applications can be compiled once and run in multiple locations due to Java bytecode.
 // Exception handling makes sure programs can anticipate problems and resolve them without terminating the application while running.
 // Java supports multithreading, enabling the execution of multiple threads simultaneously to build efficient and responsive applications.
+
+// why to read the constrains  befiore doing the problem???
+
 
 //=================================================================================================================================================================================================================================
 
@@ -208,7 +211,7 @@
 // int
 // class
 
-“How big can the input become, and therefore how much time can my algorithm take?”
+
 // public
 // static
 // if
