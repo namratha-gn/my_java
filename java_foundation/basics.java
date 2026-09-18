@@ -60,6 +60,11 @@
 // you can write return inside any operation , loop , or if statetemt 
 // but you should ask yourself the question ...whta if thta condition doesn't execute????.....soo always return something to the function (if nothing return -1)
 
+// Easy rule to remember
+// Java type	Length
+// String	str.length() ✅
+// Array	arr.length ✅
+
 
 
 // one very very vital thing that one can know is......
