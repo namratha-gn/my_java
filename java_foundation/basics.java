@@ -65,7 +65,11 @@
 // String	str.length() ✅
 // Array	arr.length ✅
 
+// In javaScript str[0]...In java str.charAt(0)-'0'
+ 
+// Here str.charAt(0) is a character ....you cannot comapre this character with ,any integer (if you wnat in any situation) ..soo str.charAt(0)-'0'...this internally comapares thier unicodes and gives output a integer 
 
+// if sound=true ..break;(this situation may exits in many conditions)...true to use this found kin dof avriables in your code
 
 // one very very vital thing that one can know is......
 // The input num you are sending 
