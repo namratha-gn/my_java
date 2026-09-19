@@ -35,6 +35,7 @@
 //very very very important thing here is ...
 //int remainder=n%k or int lastdigit=n%10;........here n will not change n will stay same...to modify/change/reduce n we do n=n/10...we reduce because at soem time it becomes <0...sooo our loop ends while(n>0) why we write this condition means?? at some time n becomes 0 
 //Don't ever use inbuilt mathods inside the leetcode problem..try to do it in manual method ..
+//if your variable overflows also leetcode..shows Time limit exceed (before using i*i in loop think will it overflow like that)
 
 // In java how to access the characters of a string ??
 // not just index method str[0]==> wrong(this is in js)
