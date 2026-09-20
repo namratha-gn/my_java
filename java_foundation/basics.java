@@ -115,6 +115,19 @@
 // Also can be written like this...we are using using valid to just say audience or reader that we found 0. and we are writing break
 // and using that valid variable forward in code and writing condition in such a way the condition should be 0 entire code doesn't work and go for next iteration
 
+//if you want to use the collections in your code.....you out import java.util.*; outside the class solution 
+
+//LOGIC pattern
+//you have given an integer...you need to return two numbers which sum up to give that integer
+// loop till n from 1....i=1;i<=n;i++
+// a=i;
+// b=n-i;
+
+//we use this kind of thing in our code....sikkudre break aagu
+//if found==true 
+//break
+
+
 //==========================================================================================================================================================================================================================
 
 // IMPORTANR POINTS TO REMEMBER
