@@ -129,7 +129,95 @@
 // int c;
 // this is not allowed because initializing or doing any operation on c inside the loop or if or function might happen or might not exceute...soo returning c is unsafe ..therefore do int c=0
 
+// 1. Local variables must be initialized before use int c = 0;
+// 2. Variables assigned inside a loop may still be considered uninitialized
+// ❌
+// int c;
+// for (int i = 0; i < n; i++) {
+//     c = i;
+// }
+// return c;
 
+// Why? n could be 0, so the loop may never execute.
+
+// 3. Arrays have fixed size
+// 4. Arrays don't have push() or add()
+// for arraylist we'll be having
+// ArrayList<Integer> list = new ArrayList<>();
+// list.add(10);
+
+// 5. Array length vs String length vs ArrayList size
+
+// This is VERY important.
+
+// arr.length
+// str.length()
+// list.size()
+
+// 6. = vs ==
+
+// a = 5;
+// means assign 5 to a.
+// a == 5
+// means check whether a equals 5.
+
+// 8. Integer division removes decimals
+// int x = 5 / 2;
+
+// Result:
+// 2
+// Not 2.5.
+
+// 10. / 10 removes the last digit for integers
+
+// 11. String indexing uses charAt()
+
+// 13. char and int can interact
+
+// This is the important one you asked about earlier:
+// str.charAt(i) - '0'
+// If:
+// str.charAt(i) = '7'
+// then:
+// '7' - '0' = 7
+// because Java performs the operation using character Unicode values.
+
+// 14. Be careful with integer overflow
+
+// Java int range:
+// -2,147,483,648
+// to
+//  2,147,483,647
+// So:
+// int x = 2147483647;
+// x = x + 1;
+// causes overflow.
+// For larger values use:
+// long
+
+// 15. Math.pow() returns double
+
+// 19. return immediately exits the method
+
+// 21. Java is case-sensitive
+
+// These are different:
+// int number;
+// int Number;
+// int NUMBER;
+
+// Also:
+// String
+// not:
+// string
+
+// and:
+
+// System.out.println()
+// not:
+// system.out.println()
+
+// Method return type must match returned value
 //==========================================================================================================================================================================================================================
 
 // IMPORTANR POINTS TO REMEMBER
