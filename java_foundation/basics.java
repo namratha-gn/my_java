@@ -125,6 +125,10 @@
 //if found==true 
 //break
 
+// In java 
+// int c;
+// this is not allowed because initializing or doing any operation on c inside the loop or if or function might happen or might not exceute...soo returning c is unsafe ..therefore do int c=0
+
 
 //==========================================================================================================================================================================================================================
 
