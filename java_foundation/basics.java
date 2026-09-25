@@ -218,6 +218,34 @@
 // system.out.println()
 
 // Method return type must match returned value
+
+// 23. void means nothing is returned
+
+// 24. Don't modify the loop variable accidentally
+
+// Be careful with:
+
+// for (int i = 0; i < n; i++) {
+//     i++;
+// }
+
+// You're incrementing i twice per iteration.
+
+// 25. Watch your braces { }
+
+// This:
+
+// if (condition) {
+//     ...
+// }
+// return answer;
+
+// is different from:
+
+// if (condition) {
+//     ...
+//     return answer;
+// }
 //==========================================================================================================================================================================================================================
 
 // IMPORTANR POINTS TO REMEMBER
